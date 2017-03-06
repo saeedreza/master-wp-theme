@@ -7,8 +7,7 @@
 		    <main id="main" class="large-12 medium-12 columns" role="main">
     
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			 
-					<!-- To see additional archive styles, visit the /parts directory -->
+			  
 					<?php get_template_part( 'parts/loop', 'product' ); ?>
 				    
 				<?php endwhile; ?>	
@@ -22,8 +21,7 @@
 				<?php endif; ?>
 																								
 		    </main> <!-- end #main -->
- 
-		    
+  
 		</div> <!-- end #inner-content -->
 
 	</div> <!-- end #content -->
