@@ -1,6 +1,6 @@
 <?php
 // SIDEBARS AND WIDGETIZED AREAS
-function joints_register_sidebars() {
+function master_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
 		'name' => __('Sidebar 1', 'jointswp'),

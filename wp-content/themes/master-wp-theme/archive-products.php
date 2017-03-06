@@ -12,7 +12,7 @@
 				    
 				<?php endwhile; ?>	
 
-					<?php joints_page_navi(); ?>
+					<?php master_page_navi(); ?>
 					
 				<?php else : ?>
 											
