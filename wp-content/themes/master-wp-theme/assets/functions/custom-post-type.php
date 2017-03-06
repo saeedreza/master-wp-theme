@@ -5,21 +5,21 @@ function custom_post_products() {
 	register_post_type( 'products', /* (http://codex.wordpress.org/Function_Reference/register_post_type) */
 	 	// let's now add all the options for this post type
 		array('labels' => array(
-			'name' => __('Products', 'jointswp'), /* This is the Title of the Group */
-			'singular_name' => __('Products', 'jointswp'), /* This is the individual type */
-			'all_items' => __('All Products', 'jointswp'), /* the all items menu item */
-			'add_new' => __('Add New', 'jointswp'), /* The add new menu item */
-			'add_new_item' => __('Add New Product', 'jointswp'), /* Add New Display Title */
-			'edit' => __( 'Edit', 'jointswp' ), /* Edit Dialog */
-			'edit_item' => __('Edit Product', 'jointswp'), /* Edit Display Title */
-			'new_item' => __('New Product', 'jointswp'), /* New Display Title */
-			'view_item' => __('View Product', 'jointswp'), /* View Display Title */
-			'search_items' => __('Search Product', 'jointswp'), /* Search Custom Type Title */ 
-			'not_found' =>  __('Nothing found in the Database.', 'jointswp'), /* This displays if there are no entries yet */ 
-			'not_found_in_trash' => __('Nothing found in Trash', 'jointswp'), /* This displays if there is nothing in the trash */
+			'name' => __('Products', 'masterwp'), /* This is the Title of the Group */
+			'singular_name' => __('Products', 'masterwp'), /* This is the individual type */
+			'all_items' => __('All Products', 'masterwp'), /* the all items menu item */
+			'add_new' => __('Add New', 'masterwp'), /* The add new menu item */
+			'add_new_item' => __('Add New Product', 'masterwp'), /* Add New Display Title */
+			'edit' => __( 'Edit', 'masterwp' ), /* Edit Dialog */
+			'edit_item' => __('Edit Product', 'masterwp'), /* Edit Display Title */
+			'new_item' => __('New Product', 'masterwp'), /* New Display Title */
+			'view_item' => __('View Product', 'masterwp'), /* View Display Title */
+			'search_items' => __('Search Product', 'masterwp'), /* Search Custom Type Title */ 
+			'not_found' =>  __('Nothing found in the Database.', 'masterwp'), /* This displays if there are no entries yet */ 
+			'not_found_in_trash' => __('Nothing found in Trash', 'masterwp'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is the Product custom post type', 'jointswp' ), /* Custom Type Description */
+			'description' => __( 'This is the Product custom post type', 'masterwp' ), /* Custom Type Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -48,16 +48,16 @@ register_taxonomy( 'product_tag',
 	array('products'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
 	array('hierarchical' => false,    /* if this is false, it acts like tags */                
 		'labels' => array(
-			'name' => __( 'Product Tags', 'jointswp' ), /* name of the custom taxonomy */
-			'singular_name' => __( 'Product Tag', 'jointswp' ), /* single taxonomy name */
-			'search_items' =>  __( 'Search Product Tags', 'jointswp' ), /* search title for taxomony */
-			'all_items' => __( 'All Product Tags', 'jointswp' ), /* all title for taxonomies */
-			'parent_item' => __( 'Parent Product Tag', 'jointswp' ), /* parent title for taxonomy */
-			'parent_item_colon' => __( 'Parent Product Tag:', 'jointswp' ), /* parent taxonomy title */
-			'edit_item' => __( 'Edit Product Tag', 'jointswp' ), /* edit custom taxonomy title */
-			'update_item' => __( 'Update Product Tag', 'jointswp' ), /* update title for taxonomy */
-			'add_new_item' => __( 'Add New Product Tag', 'jointswp' ), /* add new title for taxonomy */
-			'new_item_name' => __( 'New Product Tag Name', 'jointswp' ) /* name title for taxonomy */
+			'name' => __( 'Product Tags', 'masterwp' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Product Tag', 'masterwp' ), /* single taxonomy name */
+			'search_items' =>  __( 'Search Product Tags', 'masterwp' ), /* search title for taxomony */
+			'all_items' => __( 'All Product Tags', 'masterwp' ), /* all title for taxonomies */
+			'parent_item' => __( 'Parent Product Tag', 'masterwp' ), /* parent title for taxonomy */
+			'parent_item_colon' => __( 'Parent Product Tag:', 'masterwp' ), /* parent taxonomy title */
+			'edit_item' => __( 'Edit Product Tag', 'masterwp' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Update Product Tag', 'masterwp' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Add New Product Tag', 'masterwp' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'New Product Tag Name', 'masterwp' ) /* name title for taxonomy */
 		),
 		'show_admin_column' => true,
 		'show_ui' => true,

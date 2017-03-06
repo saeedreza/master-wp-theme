@@ -3,8 +3,8 @@
 function master_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'jointswp'),
-		'description' => __('The first (primary) sidebar.', 'jointswp'),
+		'name' => __('Sidebar 1', 'masterwp'),
+		'description' => __('The first (primary) sidebar.', 'masterwp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -13,8 +13,8 @@ function master_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'offcanvas',
-		'name' => __('Offcanvas', 'jointswp'),
-		'description' => __('The offcanvas sidebar.', 'jointswp'),
+		'name' => __('Offcanvas', 'masterwp'),
+		'description' => __('The offcanvas sidebar.', 'masterwp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -31,8 +31,8 @@ function master_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'jointswp'),
-		'description' => __('The second (secondary) sidebar.', 'jointswp'),
+		'name' => __('Sidebar 2', 'masterwp'),
+		'description' => __('The second (secondary) sidebar.', 'masterwp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
