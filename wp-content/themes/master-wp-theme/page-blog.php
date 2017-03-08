@@ -2,10 +2,12 @@
 	get_header(); 
 
 //---------------------
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $post_args = array( 
-	'posts_per_page' => -1
+	'posts_per_page' => 10,
+	'paged'          => $paged
 );
-$post_query = new WP_Query($post_args);
+$wp_query = new WP_Query($post_args);
 //---------------------
 ?>
 			
@@ -15,21 +17,20 @@ $post_query = new WP_Query($post_args);
 	
 		    <main id="main" class="large-8 medium-8 columns" role="main">
 		    
-			    <?php if ($post_query->have_posts()) : while ($post_query->have_posts()) : $post_query->the_post(); ?>
+			    <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 			 
-					<!-- To see additional archive styles, visit the /parts directory -->
-					<?php get_template_part( 'parts/loop', 'archive' ); ?>
+					<?php get_template_part( 'parts/loop', 'blog' ); ?>
 				    
 				<?php endwhile; ?>	
 
 					<?php master_page_navi(); ?>
-					
+					 
 				<?php else : ?>
 											
 					<?php get_template_part( 'parts/content', 'missing' ); ?>
 						
-				<?php endif; ?>
-																								
+				<?php endif; ?>				 
+																
 		    </main> <!-- end #main -->
 		    
 		    <?php get_sidebar(); ?>
