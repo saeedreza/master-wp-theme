@@ -14,4 +14,12 @@
 
 	<?php endif; ?>
 
+	<?php if(is_single()) : ?>
+
+		<?php get_template_part( 'parts/widget', 'related-posts' ); ?> 
+ 
+	<?php else: ?>
+
+	<?php endif; ?>
+
 </div>
