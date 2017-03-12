@@ -17,6 +17,7 @@
 	<?php if(is_single()) : ?>
 
 		<?php get_template_part( 'parts/widget', 'related-posts' ); ?> 
+		<?php get_template_part( 'parts/widget', 'related-products' ); ?> 
  
 	<?php else: ?>
 
