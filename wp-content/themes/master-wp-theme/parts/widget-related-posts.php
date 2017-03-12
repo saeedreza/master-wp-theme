@@ -8,8 +8,7 @@
         $post_args = array(
             'tag__in' => $tag_ids,
             'post__not_in' => array(get_the_ID()),
-            'posts_per_page' => 5,
-            'caller_get_posts' => 1
+            'posts_per_page' => 5
         );
 
         $wp_query = new WP_Query($post_args);
