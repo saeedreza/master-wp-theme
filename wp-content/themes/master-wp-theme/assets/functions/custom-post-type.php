@@ -39,6 +39,9 @@ function custom_post_products() {
 
 	/* this adds your post tags to your custom post type */
 	register_taxonomy_for_object_type('product_tag', 'products');
+
+	/* this adds your post categories to your custom post type */
+	register_taxonomy_for_object_type('product_cat', 'products');
 } 
 
 // adding the function to the Wordpress init
@@ -65,3 +68,26 @@ register_taxonomy( 'product_tag',
 		'query_var' => true,
 	)
 ); 
+
+// now let's add custom categories (these act like categories)
+register_taxonomy( 'product_cat', 
+	array('products'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array('hierarchical' => true,     /* if this is true, it acts like categories */             
+		'labels' => array(
+			'name' => __( 'Product Categories', 'masterwp' ), /* name of the custom taxonomy */
+			'singular_name' => __( 'Product Category', 'masterwp' ), /* single taxonomy name */
+			'search_items' =>  __( 'Search Product Categories', 'masterwp' ), /* search title for taxomony */
+			'all_items' => __( 'All Product Categories', 'masterwp' ), /* all title for taxonomies */
+			'parent_item' => __( 'Parent Product Category', 'masterwp' ), /* parent title for taxonomy */
+			'parent_item_colon' => __( 'Parent Product Category:', 'masterwp' ), /* parent taxonomy title */
+			'edit_item' => __( 'Edit Product Category', 'masterwp' ), /* edit custom taxonomy title */
+			'update_item' => __( 'Update Product Category', 'masterwp' ), /* update title for taxonomy */
+			'add_new_item' => __( 'Add New Product Category', 'masterwp' ), /* add new title for taxonomy */
+			'new_item_name' => __( 'New Product Category Name', 'masterwp' ) /* name title for taxonomy */
+		),
+		'show_admin_column' => true, 
+		'show_ui' => true,
+		'query_var' => true,
+		'rewrite' => array( 'slug' => 'product-slug' ),
+	)
+);   
