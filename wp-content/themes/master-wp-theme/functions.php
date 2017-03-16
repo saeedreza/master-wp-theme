@@ -25,3 +25,6 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 
 // Use this as a template for custom post types
  require_once(get_template_directory().'/assets/functions/custom-post-type.php');
+
+ // Register widgets
+require_once(get_template_directory().'/assets/functions/widgets.php'); 
