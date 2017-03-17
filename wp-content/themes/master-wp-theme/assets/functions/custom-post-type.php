@@ -88,6 +88,6 @@ register_taxonomy( 'product_cat',
 		'show_admin_column' => true, 
 		'show_ui' => true,
 		'query_var' => true,
-		'rewrite' => array( 'slug' => 'product-slug' ),
+		'rewrite' => array( 'slug' => 'products','with_front'=>false ),
 	)
 );   
