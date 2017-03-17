@@ -25,7 +25,7 @@ function getProductsByCategory($category){
 					if ($categories) : 
 						foreach($categories as $category ):
 				?>
-						<h2><?php echo $category->name; ?></h2>
+						<a href="/products/<?php echo $category->slug; ?>"><h2><?php echo $category->name; ?></h2></a>
 						<hr /> 
 				<?php
 						$wp_query = getProductsByCategory($category->slug); 
