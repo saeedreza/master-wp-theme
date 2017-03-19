@@ -3,16 +3,6 @@
 
 //---------------------
 $categories = get_terms( 'product_cat', array('hide_empty' => false) );
- 
-function getProductsByCategory($category){
-	$post_args = array( 
-		'post_type' => 'products', 
-		'product_cat' => $category,
-		'posts_per_page' => -1
-	);
-	$wp_query = new WP_Query($post_args);
-	return $wp_query;
-}
 //---------------------
 ?>
 			

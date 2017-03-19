@@ -28,3 +28,6 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 
  // Register widgets
 require_once(get_template_directory().'/assets/functions/widgets.php'); 
+
+ // Custom functions
+require_once(get_template_directory().'/assets/functions/custom-functions.php'); 
