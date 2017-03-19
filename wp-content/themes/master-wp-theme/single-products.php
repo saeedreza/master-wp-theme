@@ -41,6 +41,7 @@ $blog_posts = getPostsByCategory($product_post_category->slug,3);
 
 		    <?php endif; ?>
 
+			<?php dynamic_sidebar('cta_singleproduct'); ?>
 		</main> <!-- end #main -->
 
 

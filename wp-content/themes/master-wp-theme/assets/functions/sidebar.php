@@ -20,4 +20,15 @@ function master_register_sidebars() {
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
+
+	register_sidebar(array(
+		'id' => 'cta_singleproduct',
+		'name' => __('Single product (CTA)', 'masterwp'),
+		'description' => __('Show CTA in static pages.', 'masterwp'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+ 
 } // don't remove this bracket!
