@@ -40,14 +40,29 @@
 
 		<div class="off-canvas-wrapper">
 							
-			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
+			<div class="off-canvas position-right" id="off-canvas" data-off-canvas>
+				<?php master_off_canvas_nav(); ?>
+			</div>
 			
 			<div class="off-canvas-content" data-off-canvas-content>
 				
 				<header class="header" role="banner">
-						
-					 <!-- This navs will be applied to the topbar, above all content 
-						  To see additional nav styles, visit the /parts directory -->
-					 <?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
-	 	
+					 
+					<div class="top-bar" id="top-bar-menu">
+						<div class="top-bar-left float-left">
+							<ul class="menu">
+								<li><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></li>
+							</ul>
+						</div>
+						<div class="top-bar-right show-for-medium">
+							<?php master_top_nav(); ?>	
+						</div>
+						<div class="top-bar-right float-right show-for-small-only">
+							<ul class="menu">
+								<!-- <li><button class="menu-icon" type="button" data-toggle="off-canvas"></button></li> -->
+								<li><a data-toggle="off-canvas"><?php _e( 'Menu', 'masterwp' ); ?></a></li>
+							</ul>
+						</div>
+					</div>
+ 	 	
 				</header> <!-- end .header -->
