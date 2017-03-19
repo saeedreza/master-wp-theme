@@ -13,10 +13,6 @@ function site_scripts() {
    
     // Register main stylesheet
     wp_enqueue_style( 'site-css', get_template_directory_uri() . '/assets/css/style.css', array(), '', 'all' );
-
-    // Comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-      wp_enqueue_script( 'comment-reply' );
-    }
+    
 }
 add_action('wp_enqueue_scripts', 'site_scripts', 999);
