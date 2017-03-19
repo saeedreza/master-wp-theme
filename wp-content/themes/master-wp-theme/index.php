@@ -20,7 +20,7 @@
 						</section> <!-- end article section -->
 											
 						<footer class="article-footer">
-							<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'jointstheme') . '</span> ', ', ', ''); ?></p>
+							<p class="tags"><?php the_tags('<span class="tags-title">' . __('Tags:', 'mastertheme') . '</span> ', ', ', ''); ?></p>
 						</footer> <!-- end article footer -->				    						
 					</article> <!-- end article -->
 				    
