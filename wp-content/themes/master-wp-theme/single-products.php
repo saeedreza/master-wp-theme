@@ -4,6 +4,7 @@ get_header();
 $product_post_category = get_category(get_field('post_category')); 
 $blog_posts = getPostsByCategory($product_post_category->slug,3);
 $related_products = getRelatedProduct(get_the_ID(),5);
+$otherCategories = getOtherProductCategories(get_the_ID());
 
 ?>
 			
@@ -71,6 +72,23 @@ $related_products = getRelatedProduct(get_the_ID(),5);
 			</div>
 			<?php 
 			endif; 
+
+			if($otherCategories):
+			?>
+			<div id="other-categories" class="widget">
+			<h4>Other Categories</h4>	
+			<ul>
+			<?php
+				foreach($otherCategories as $itemCategory):
+				?>
+				<li><a href="/products/<?php echo $itemCategory->slug; ?>"><?php echo $itemCategory->name; ?></a></li>
+				<?php
+				endforeach;
+			?>
+			</ul>
+			</div>
+			<?php
+			endif;
 			?> 
 		</div>
  

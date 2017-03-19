@@ -53,4 +53,15 @@ function getRelatedProduct($product_id, $count = -1){
 	return $wp_query;
 }
 
-
+// Get other product categories
+function getOtherProductCategories($product_id){
+	$category_id = wp_get_object_terms( $product_id, 'product_cat' , array('fields' => 'ids'));   
+	$terms = get_terms( 
+		'product_cat',
+			array(
+				'hide_empty' => false ,
+				'exclude'  => $category_id
+			)
+		);
+	return $terms;
+}
