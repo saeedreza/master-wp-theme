@@ -17,6 +17,8 @@ if(have_posts()): the_post();
 						<?php echo get_field("description"); ?> 
 					</section> <!-- end contact section --> 							
 				</article> <!-- end contact -->
+
+				<?php dynamic_sidebar('cta_staticpages'); ?>
 			</main>
 
 			<div id="form" class="large-6 medium-6 columns" role="complementary"> 

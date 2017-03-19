@@ -15,6 +15,8 @@ if(have_posts()): the_post();
 						<?php the_content(); ?>
 					</section> <!-- end about section --> 							
 				</article> <!-- end about -->
+
+				<?php dynamic_sidebar('cta_staticpages'); ?>
 			</main> 
 		    
 		</div> <!-- end #inner-content -->
