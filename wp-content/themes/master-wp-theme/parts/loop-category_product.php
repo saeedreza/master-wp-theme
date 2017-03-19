@@ -5,12 +5,8 @@
 	</header> <!-- end article header -->
 					
 	<section class="entry-content" itemprop="articleBody">
-		<?php 
-			$description = get_field('description'); 
-			$image = get_field('image'); 
-		?> 
-		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['caption']; ?>" width="150" />
-		<div><?php echo $description; ?></div> 
+		 <img src="<?php the_post_thumbnail_url(); ?>" />
+		 <?php the_content(); ?>
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">

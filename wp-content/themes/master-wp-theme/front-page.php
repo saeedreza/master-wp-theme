@@ -51,14 +51,12 @@ if(have_posts()): the_post();
 			<div class="home-posts">
 				<?php
 				while ( $products_query->have_posts() ) : $products_query->the_post(); 
-					$title = the_title('<h3>','</h3>',false);
-					$description = get_field('description'); 
-					$image = get_field('image');
-					?>
+					$title = the_title('<h3>','</h3>',false); 
+				?>
 					<a href="<?php the_permalink(); ?>"><?php echo $title; ?></a>
-					<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['caption']; ?>" />
-					<div><?php echo $description; ?></div>
-					<?php 
+					<img src="<?php the_post_thumbnail_url(); ?>" />
+		 			<?php the_content(); ?> 
+				<?php 
 				endwhile;
 				?>
 			</div>

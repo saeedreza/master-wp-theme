@@ -5,24 +5,8 @@
     </header> <!-- end article header -->
 					
 	<section class="entry-content" itemprop="articleBody">
-		<?php 
-			$description = get_field('description'); 
-			$image = get_field('image'); 
-		?> 
-		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['caption']; ?>" />
-		<div><?php echo $description; ?></div>
-		<div>
-			<ul>
-			<?php
-				$product_features = get_field('product_features');
-				foreach($product_features as $feature):
-			?>
-				<li><?php echo $feature['product_feature']; ?></li>
-			<?php
-				endforeach;
-			?>
-			</ul>
-		</div>
+		<img src="<?php the_post_thumbnail_url(); ?>" />
+		 <?php the_content(); ?>
 	</section> <!-- end article section -->
 						
 	<footer class="article-footer">
