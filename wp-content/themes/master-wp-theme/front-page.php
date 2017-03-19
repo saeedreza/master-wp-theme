@@ -1,19 +1,9 @@
 <?php 
 get_header();  
 
-//---------------------
-$post_args = array(
-	'tag' => 'Featured' ,
-	'posts_per_page' => -1
-);
-$post_query = new WP_Query($post_args);
-//---------------------
-$products_args = array(
-	'post_type' => 'products',
-	'product_tag' => 'Featured' ,
-	'posts_per_page' => -1
-);
-$products_query = new WP_Query($products_args);
+//--------------------- 
+$post_query = getFeaturedPosts('post','tag',-1);
+$products_query = getFeaturedPosts('products','product_tag',-1);
 //---------------------
 
 if(have_posts()): the_post();

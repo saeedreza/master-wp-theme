@@ -21,3 +21,16 @@ function getPostsByCategory($category , $count = -1){
 	$wp_query = new WP_Query($post_args);
 	return $wp_query;
 }
+
+// Get featured posts
+function getFeaturedPosts($post_type ,$tag_name, $count = -1){
+	$post_args = array(
+		'post_type' => $post_type,
+		$tag_name => 'Featured' ,
+		'posts_per_page' => $count
+	);
+	$wp_query = new WP_Query($post_args);
+	return $wp_query;
+}
+
+
